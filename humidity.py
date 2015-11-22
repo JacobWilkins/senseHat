@@ -5,6 +5,7 @@ sense=SenseHat()
 
 green=(0,255,0)
 white=(255,255,255)
+red=(255,0,0)
 
 
 while True:
@@ -13,5 +14,5 @@ while True:
     print(humidity)
 
 
-    pixels=[green if i < humidity_value else white for i in range(64)]
+    pixels=[red if i < humidity_value else white for i in range(64)]
     sense.set_pixels(pixels)
